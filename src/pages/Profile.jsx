@@ -94,7 +94,6 @@ import moment from 'moment-timezone';
 import { useTheme } from '@mui/material/styles';
 import { useEffect } from 'react';
 import { useAuthContext } from '../hooks/useAuthContext';
-import '../Profile.css';
 import avatarImage from '../assets/avatar.png';
 import coverImage from '../assets/businessGrowth.png';
 
