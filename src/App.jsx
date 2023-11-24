@@ -26,7 +26,7 @@ const Login = lazy(() => import('./pages/Login'))
 const Signup = lazy(() => import('./pages/Signup'))
 const UserProfile = lazy(() => import('./pages/UserProfile'))
 const Profile = lazy(() => import('./pages/Profile'))
-// const Friends = lazy(() => import('./components/Friends'))
+const Friends = lazy(() => import('./components/Friends'))
 
 
 function App() {
@@ -120,8 +120,8 @@ function App() {
                       path="/userProfile"
                       element={<UserProfile />}
                     />
-                    {/* <Route path='/friends' element={(user) ? <Friends /> : <Navigate to='/home' />}
-                    /> */}
+                    <Route path='/friends' element={(user) ? <Friends /> : <Navigate to='/home' />}
+                    />
                     <Route
                       path="/profile"
                       element={(user) ? (user.isFilledUserProfile ? <Profile /> : <Navigate to='/userProfile' />) : <Navigate to='/login' />}
