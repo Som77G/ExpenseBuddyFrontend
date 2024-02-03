@@ -196,7 +196,7 @@ const Navbar = ({ change, setChange }) => {
                         )}
                       </Menu.Item>
 
-                      {/* <Menu.Item>
+                      <Menu.Item>
                         {({ active }) => (
                           <Link
                             to='/friends'
@@ -205,7 +205,7 @@ const Navbar = ({ change, setChange }) => {
                             Friends
                           </Link>
                         )}
-                      </Menu.Item> */}
+                      </Menu.Item>
 
                       <Menu.Item>
                         {({ active }) => (
