@@ -7,7 +7,7 @@
 //     const navigate = useNavigate()
 
 //     useEffect (async () => {
-//         const user = await fetch("http://localhost:4000/api/user/wait");
+//         const user = await fetch("https://expensebuddybackend.onrender.com/api/user/wait");
 //         const json = await response.json();
 
 //         if (response.ok) {
@@ -39,7 +39,7 @@ function Wait() {
     const getGoogleUser = async () => {
         // try {
       
-        //     const response = await fetch("http://localhost:4000/api/user/wait", {
+        //     const response = await fetch("https://expensebuddybackend.onrender.com/api/user/wait", {
         //         method: "GET",
         //         credentials: "include",
         //         headers: {
@@ -63,7 +63,7 @@ function Wait() {
         //     console.error('Error during fetch:', error.message);
         //   }
 
-        fetch("http://localhost:4000/api/user/wait", {
+        fetch("https://expensebuddybackend.onrender.com/api/user/wait", {
         method: "GET",
         credentials: "include",
         headers: {
