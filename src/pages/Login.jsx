@@ -22,7 +22,7 @@ function Login(){
     }
 
     const handleClick = async() => {
-        window.open('http://localhost:4000/api/user/auth/google', '_self')
+        window.open('https://expensebuddybackend.onrender.com/api/user/auth/google', '_self')
     }
 
     

@@ -71,7 +71,7 @@ const Home = () => {
     console.log("chal rha h")
     const fetchAllWorkouts = async () => {
       console.log("inside all");
-      const response = await fetch('http://localhost:4000/api/workouts', {headers:{'Authorization': `Bearer ${user.token}`}})
+      const response = await fetch('https://expensebuddybackend.onrender.com/api/workouts', {headers:{'Authorization': `Bearer ${user.token}`}})
       const json = await response.json()
 
       if (response.ok) {
@@ -84,7 +84,7 @@ const Home = () => {
       console.log(category);
       const encodedCategory = encodeURIComponent(category);
       
-      const response = await fetch(`http://localhost:4000/api/workouts/category?category=${encodedCategory}`, {headers:{'Authorization': `Bearer ${user.token}`}})
+      const response = await fetch(`https://expensebuddybackend.onrender.com/api/workouts/category?category=${encodedCategory}`, {headers:{'Authorization': `Bearer ${user.token}`}})
       const json = await response.json()
 
       if (response.ok) {
