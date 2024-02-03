@@ -16,7 +16,7 @@ const GoogleSignIn = () => {
         buttonText="Sign in with Google"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
-        redirectUri="http://localhost:4000/api/user/auth/google/redirect" // Redirect URI after successful login
+        redirectUri="https://expensebuddybackend.onrender.com/api/user/auth/google/redirect" // Redirect URI after successful login
       />
     </div>
   );

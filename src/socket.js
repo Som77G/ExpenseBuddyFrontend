@@ -5,7 +5,7 @@
 //    const {user}= useAuthContext();
 //     const userid = user && user.userid;
 //     const username= user && user.email;
-//     const socket = new io("http://localhost:4000", {
+//     const socket = new io("https://expensebuddybackend.onrender.com", {
 //       autoConnect: false,
 //       withCredentials: true,
 //       query: {
@@ -26,7 +26,7 @@ const createSocketInstance = () => {
   const userid = user && user.userid;
   const username = user && user.email;
 
-  return io("http://localhost:4000", {
+  return io("https://expensebuddybackend.onrender.com", {
     autoConnect: false,
     withCredentials: true,
     query: {

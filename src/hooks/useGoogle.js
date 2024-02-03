@@ -4,7 +4,7 @@ export const useGoogle = () => {
     const { dispatch } = useAuthContext()
 
     const google = async () => {
-        // const response = await fetch('http://localhost:4000/api/user/auth/google', {
+        // const response = await fetch('https://expensebuddybackend.onrender.com/api/user/auth/google', {
         //     method: "GET", 
         //     mode: 'cors',
         //     headers: {
@@ -21,7 +21,7 @@ export const useGoogle = () => {
         //     console.log("lag gye")
         // }
 
-        window.open('http://localhost:4000/api/user/auth/google', '_self')
+        window.open('https://expensebuddybackend.onrender.com/api/user/auth/google', '_self')
     }   
     return {google}
 }

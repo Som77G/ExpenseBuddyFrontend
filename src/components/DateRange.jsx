@@ -16,7 +16,7 @@ const DateRange = () => {
     useEffect(() => {
         const fetchDateWorkouts = async (value) => {
             try {
-                const response = await fetch('http://localhost:4000/api/workouts/dateRange', {
+                const response = await fetch('https://expensebuddybackend.onrender.com/api/workouts/dateRange', {
                     method: 'POST', // Assuming you want to send the value object in the request body
                     headers: {
                         'Authorization': `Bearer ${user.token}`,

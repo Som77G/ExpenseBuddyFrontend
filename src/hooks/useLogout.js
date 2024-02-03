@@ -20,7 +20,7 @@ export const useLogout= ()=>{
         // navigate('/login')
         try {
             // Send a request to update the connected field on the server
-            const response = await fetch('http://localhost:4000/api/user/logout', {
+            const response = await fetch('https://expensebuddybackend.onrender.com/api/user/logout', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

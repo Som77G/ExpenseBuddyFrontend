@@ -19,7 +19,7 @@ const Chat = ({ userid }) => {
       
        try {
         console.log("uniqueId of message:", message);
-        const response = await fetch('http://localhost:4000/api/messages/updateMessageStatusByLender', 
+        const response = await fetch('https://expensebuddybackend.onrender.com/api/messages/updateMessageStatusByLender', 
         {
           method: 'PUT' ,
           headers: {
@@ -46,7 +46,7 @@ const Chat = ({ userid }) => {
    
     try {
       console.log("uniqueId of message:", message);
-     const response = await fetch('http://localhost:4000/api/messages/updateMessageStatusByBorrower', 
+     const response = await fetch('https://expensebuddybackend.onrender.com/api/messages/updateMessageStatusByBorrower', 
      {
        method: 'PUT' ,
        headers: {

@@ -51,7 +51,7 @@ function UserProfileForm() {
     console.log(gender);
     console.log(profileInfo);
 
-    const response = await fetch("http://localhost:4000/api/profile/createProfile", {
+    const response = await fetch("https://expensebuddybackend.onrender.com/api/profile/createProfile", {
       method: "POST",
       body: JSON.stringify(profileInfo),
       headers: {

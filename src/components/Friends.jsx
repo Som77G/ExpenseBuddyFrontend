@@ -9,7 +9,7 @@ import { useAuthContext } from '../hooks/useAuthContext'
 import {useTheme} from '@mui/material/styles'
 // import io from 'socket.io-client'
 
-// const socket= io.connect("http://localhost:4000")
+// const socket= io.connect("https://expensebuddybackend.onrender.com")
 export const FriendContext= createContext();
 export const MessageContext= createContext();
 const Friends= ()=>{
@@ -23,7 +23,7 @@ const Friends= ()=>{
     const ChakraWrapper= isDarkMode ? ChakraWrapperDark: ChakraWrapperLight;
     useEffect(()=>{
       const fetchFriends= async ()=>{
-        const response = await fetch('http://localhost:4000/api/friends', {
+        const response = await fetch('https://expensebuddybackend.onrender.com/api/friends', {
          headers: {'userid': `${userid}`}
     })
      const json= await response.json();
@@ -38,7 +38,7 @@ const Friends= ()=>{
     }, [user]);
     useEffect(()=>{
       const fetchMessages= async ()=>{
-        const response = await fetch('http://localhost:4000/api/messages', {
+        const response = await fetch('https://expensebuddybackend.onrender.com/api/messages', {
          headers: {'userid': `${userid}`}
     })
      const json= await response.json();
