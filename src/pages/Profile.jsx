@@ -22,7 +22,7 @@
 //           const email = user.email
 //           console.log(email)
 //           const encodedEmail = encodeURIComponent(email);
-//           const response = await fetch(`https://expensebuddybackend.onrender.com/api/profile/getProfile?email=${encodedEmail}`)
+//           const response = await fetch(`http://localhost:4000/api/profile/getProfile?email=${encodedEmail}`)
 //           const json = await response.json()
     
 //           if (response.ok) {
@@ -94,6 +94,7 @@ import moment from 'moment-timezone';
 import { useTheme } from '@mui/material/styles';
 import { useEffect } from 'react';
 import { useAuthContext } from '../hooks/useAuthContext';
+import '../Profile.css';
 import avatarImage from '../assets/avatar.png';
 import coverImage from '../assets/businessGrowth.png';
 
@@ -118,7 +119,7 @@ function Profile() {
             const email = user.email
             console.log(email)
             const encodedEmail = encodeURIComponent(email);
-            const response = await fetch(`https://expensebuddybackend.onrender.com/api/profile/getProfile?email=${encodedEmail}`)
+            const response = await fetch(`http://localhost:4000/api/profile/getProfile?email=${encodedEmail}`)
             const json = await response.json()
 
             if (response.ok) {

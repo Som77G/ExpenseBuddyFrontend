@@ -47,7 +47,7 @@ const Navbar = ({ change, setChange }) => {
   //     const email = user.email
   //     console.log(email)
   //     const encodedEmail = encodeURIComponent(email);
-  //     const response = await fetch(`https://expensebuddybackend.onrender.com/api/profile/getProfile?email=${encodedEmail}`)
+  //     const response = await fetch(`http://localhost:4000/api/profile/getProfile?email=${encodedEmail}`)
   //     const json = await response.json()
 
   //     if (response.ok) {
@@ -114,7 +114,7 @@ const Navbar = ({ change, setChange }) => {
 
             </div>
 
-            
+
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
               {/* for buttons */}
@@ -125,8 +125,8 @@ const Navbar = ({ change, setChange }) => {
 
                     {['top'].map((anchor) => (
                       <React.Fragment key={anchor}>
-                        <div className = ''></div>
-                        <Button variant="contained" onClick={toggleDrawer(anchor, true)}><AddIcon/><span className="hidden sm:inline">Add Expense</span></Button>
+                        <div className=''></div>
+                        <Button variant="contained" onClick={toggleDrawer(anchor, true)}><AddIcon /><span className="hidden sm:inline">Add Expense</span></Button>
                         <Drawer
                           PaperProps={{
                             sx: { width: "60%", marginLeft: "20%", marginTop: '10px', borderRadius: "4px" },
@@ -188,7 +188,7 @@ const Navbar = ({ change, setChange }) => {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            to = '/profile'
+                            to='/profile'
                             className={classNames(active ? ((isDarkMode) ? 'bg-zinc-900 text-white' : 'bg-gray-100 text-black') : '', 'block px-4 py-2 text-sm')}
                           >
                             Your Profile
@@ -199,7 +199,7 @@ const Navbar = ({ change, setChange }) => {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            to = '/friends'
+                            to='/friends'
                             className={classNames(active ? ((isDarkMode) ? 'bg-zinc-900 text-white' : 'bg-gray-100 text-black') : '', 'block px-4 py-2 text-sm')}
                           >
                             Friends
@@ -222,7 +222,7 @@ const Navbar = ({ change, setChange }) => {
                 </Menu>
               )}
 
-{user && !user.isFilledUserProfile && (
+              {user && !user.isFilledUserProfile && (
                 <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm ">
@@ -286,7 +286,7 @@ const Navbar = ({ change, setChange }) => {
                     <Menu.Items className={`absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${isDarkMode ? 'bg-zinc-800' : 'bg-white'}`}>                      <Menu.Item>
                       {({ active }) => (
                         <Link
-                          to = '/login'
+                          to='/login'
                           className={classNames(active ? ((isDarkMode) ? 'bg-zinc-900 text-white' : 'bg-gray-100 text-black') : '', 'block px-4 py-2 text-sm')}
                         >
                           Log In
@@ -297,7 +297,7 @@ const Navbar = ({ change, setChange }) => {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            to = '/signup'
+                            to='/signup'
                             className={classNames(active ? ((isDarkMode) ? 'bg-zinc-900 text-white' : 'bg-gray-100 text-black') : '', 'block px-4 py-2 text-sm')}
                           >
                             Sign Up

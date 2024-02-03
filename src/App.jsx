@@ -8,7 +8,8 @@ import { useAuthContext } from './hooks/useAuthContext'
 import { useProfileContext } from './hooks/useProfileContext'
 
 import * as React from 'react';
-
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
 
 // pages & components
 // import Home from './pages/Home'
@@ -27,7 +28,7 @@ const Signup = lazy(() => import('./pages/Signup'))
 const UserProfile = lazy(() => import('./pages/UserProfile'))
 const Profile = lazy(() => import('./pages/Profile'))
 const Friends = lazy(() => import('./components/Friends'))
-
+const Wait = lazy(() => import('./pages/Wait'))
 
 function App() {
   const { user } = useAuthContext();
@@ -96,6 +97,10 @@ function App() {
                 <Navbar change={darkMode} setChange={() => setDarkMode(!darkMode)} />
                 <div className="pages">
                   <Routes>
+                    <Route
+                      path = "/wait"
+                      element = {<Wait/>}
+                    />
                     <Route
                       path="/home"
                       element={!user ? <Navigate to='/login' /> : <Home />}

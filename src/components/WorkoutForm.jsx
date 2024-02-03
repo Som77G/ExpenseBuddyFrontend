@@ -37,7 +37,7 @@ const WorkoutForm = () => {
     
     const workout = {category, description, method, status, payee, message, amount, isRecurring, recurringTime};
 
-    const response = await fetch('https://expensebuddybackend.onrender.com/api/workouts', {
+    const response = await fetch('http://localhost:4000/api/workouts', {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {
